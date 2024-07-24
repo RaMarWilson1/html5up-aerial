@@ -1,0 +1,18 @@
+/* CSS file */
+
+/* List Style */
+ul {
+    list-style-type: none;
+}
+
+/* Image Styles */
+ul li img {
+    border-radius: 50%; /* Makes the image circular */
+    transition: transform 0.3s ease-in-out; /* Smooth transformation */
+}
+
+/* Hover Effects */
+ul li img:hover {
+    transform: scale(1.1); /* Increase size */
+    border-bottom: 2px solid #000; /* Underline */
+}
