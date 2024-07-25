@@ -1,18 +1,108 @@
-/* CSS file */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+@import url("fontawesome-all.min.css");
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(/assets/css/images/earthy.jpg); /* Beige */
+    color: #556b2f; /* Dark Olive Green */
+    background-size: 200% 100%; /* Adjust the background size */
+    animation: bg-animation 30s linear infinite; /* Apply the animation */
+}
 
-/* List Style */
+header {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: transparent; /* Make the header background transparent */
+}
+
+
+/* Other styles remain the same */
+
+@keyframes bg-animation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+h2 {
+    font-size: 2em;
+    color: #556b2f; /* Dark Olive Green */
+}
+
 ul {
     list-style-type: none;
+    padding: 0;
+    display: flex; /* Align list items horizontally */
+    justify-content: center; /* Center the list items horizontally */
+    flex-wrap: wrap; /* Allow the list items to wrap onto the next line if necessary */
 }
 
-/* Image Styles */
-ul li img {
-    border-radius: 50%; /* Makes the image circular */
-    transition: transform 0.3s ease-in-out; /* Smooth transformation */
+li {
+    margin: 10px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
 }
 
-/* Hover Effects */
-ul li img:hover {
-    transform: scale(1.1); /* Increase size */
-    border-bottom: 2px solid #000; /* Underline */
+img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+    border-radius: 50%; /* Make the images circular */
 }
+
+img:hover {
+    transform: rotate(360deg);
+    width: 60px;
+    height: 60px;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #556b2f; /* Dark Olive Green */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #8fbc8f; /* Dark Sea Green */
+}
+
+
+/* Footer Styles */
+ffooter {
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: transparent; /* Make the footer background transparent */
+}
+
