@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>My Projects</h1>
+        <nav class="top-navbar">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="project-container" id="project-container">
+ 
+    </div>
+
+    <script>
+        const projects = [
+            {
+                title: "PortFolio Website",
+                description: "Welcome to Ra’Mar Wilson’s dynamic portfolio website! Built with HTML, CSS, and JavaScript, this site showcases my skills, projects, and experiences in a visually engaging and interactive way. Explore my journey in computer science and AI, and see how I bring ideas to life through innovative web development.",
+                imageUrl: `assets/css/images/Screenshot 2024-07-31 192643.png`,
+                githubUrl: "https://github.com/RaMarWilson1/RaMarWilson1.github.io"
+            },
+            {
+                title: "BookBetter",
+                description: "Coming soon",
+                imageUrl: `assets/css/images/Screenshot 2024-07-31 193534.png`,
+                githubUrl: "https://github.com/RaMarWilson1"
+            },
+        
+        ];
+
+        function createProjectBox(project) {
+            const projectBox = document.createElement('div');
+            projectBox.className = 'project-box';
+
+            const projectImage = document.createElement('img');
+            projectImage.className = 'project-image';
+            projectImage.src = project.imageUrl;
+            projectImage.alt = project.title;
+
+            const projectTitle = document.createElement('h2');
+            projectTitle.className = 'project-title';
+            projectTitle.textContent = project.title;
+
+            const projectDescription = document.createElement('p');
+            projectDescription.className = 'project-description';
+            projectDescription.textContent = project.description;
+
+            const githubButton = document.createElement('a');
+            githubButton.className = 'github-button';
+            githubButton.href = project.githubUrl;
+            githubButton.textContent = 'View on GitHub';
+            githubButton.target = '_blank';
+
+            projectBox.appendChild(projectImage);
+            projectBox.appendChild(projectTitle);
+            projectBox.appendChild(projectDescription);
+            projectBox.appendChild(githubButton);
+
+            return projectBox;
+        }
+
+        function displayProjects() {
+            const projectContainer = document.getElementById('project-container');
+            projects.forEach(project => {
+                const projectBox = createProjectBox(project);
+                projectContainer.appendChild(projectBox);
+            });
+        }
+
+        window.onload = displayProjects;
+    </script>
+</body>
+</html>

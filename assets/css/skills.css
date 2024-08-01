@@ -1,69 +1,68 @@
+/* Import Fonts and Icons */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
 @import url("fontawesome-all.min.css");
+
+/* Body Styles */
 body {
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
     padding: 0;
-    background-image:url(/assets/css/images/earthy.jpg); /* Beige */
-    color: #556b2f; /* Dark Olive Green */
-    background-size: 200% 100%; /* Adjust the background size */
-    animation: bg-animation 30s linear infinite; /* Apply the animation */
+    background-image: url(/assets/css/images/IMG_4271.jpg);
+    color: #ffffff;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
+/* Header Styles */
 header {
     padding: 20px;
     text-align: center;
     color: white;
-    background-color: transparent; /* Make the header background transparent */
+    background-color: transparent;
 }
 
-
-/* Other styles remain the same */
-
-@keyframes bg-animation {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
-}
-
-
-h1 {
+header h1 {
     margin: 0;
     font-size: 2.5em;
 }
 
+/* Main Content Styles */
 main {
     padding: 20px;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-h2 {
+main h2 {
     font-size: 2em;
-    color: #556b2f; /* Dark Olive Green */
+    color: #ffffff;
 }
 
+/* List Styles */
 ul {
     list-style-type: none;
     padding: 0;
-    display: flex; /* Align list items horizontally */
-    justify-content: center; /* Center the list items horizontally */
-    flex-wrap: wrap; /* Allow the list items to wrap onto the next line if necessary */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-li {
+ul li {
     margin: 10px;
     font-size: 1.5em;
     display: flex;
     align-items: center;
 }
 
+/* Image Styles */
 img {
     width: 50px;
     height: 50px;
     margin-left: 10px;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
-    border-radius: 50%; /* Make the images circular */
+    border-radius: 50%;
 }
 
 img:hover {
@@ -74,35 +73,71 @@ img:hover {
 
 /* Navbar Styles */
 .navbar {
-    position: fixed;
+    position: relative;
     top: 20px;
-    right: 20px;
-    background-color: #556b2f; /* Dark Olive Green */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ad6b4b;
     padding: 10px;
     border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
     padding: 8px 16px;
-    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
 .navbar a:hover {
-    background-color: #8fbc8f; /* Dark Sea Green */
+    background-color: #8fbc8f;
 }
 
+/* Experience Box Styles */
+#experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.experience-box {
+    background-color: #ad6c4b98;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-box1 {
+    background-color:#ad6c4b98;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experience-box1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 /* Footer Styles */
-ffooter {
+footer {
     color: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color: transparent; /* Make the footer background transparent */
+    background-color: transparent;
 }
-
