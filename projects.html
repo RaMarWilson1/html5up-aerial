@@ -29,13 +29,22 @@
                 title: "PortFolio Website",
                 description: "Welcome to Ra’Mar Wilson’s dynamic portfolio website! Built with HTML, CSS, and JavaScript, this site showcases my skills, projects, and experiences in a visually engaging and interactive way. Explore my journey in computer science and AI, and see how I bring ideas to life through innovative web development.",
                 imageUrl: `assets/css/images/Screenshot 2024-07-31 192643.png`,
-                githubUrl: "https://github.com/RaMarWilson1/RaMarWilson1.github.io"
+                githubUrl: "https://github.com/RaMarWilson1/RaMarWilson1.github.io",
+                link:"https://ramarwilson.com/"
+            },
+            {
+                title: "Hero Chat",
+                description: "Collaborated with 2 others to create Hero Chat. Hero chat allows you to ask 'JARVIS' anything about super heroes, deployed with Vercel and created with React, Llama 3 and Firebase. Hero chat has a Login, Sign-up, and a forgot password. ",
+                imageUrl:`assets/css/images/Screenshot 2024-08-22 170503`,
+                githubUrl:"https://github.com/Oscar-999/ChatSupport",
+                link:"https://herochat-nine.vercel.app"
             },
             {
                 title: "BookBetter",
                 description: "Coming soon",
                 imageUrl: `assets/css/images/Screenshot 2024-07-31 193534.png`,
-                githubUrl: "https://github.com/RaMarWilson1"
+                githubUrl: "https://github.com/RaMarWilson1",
+                link:"https://ramarwilson.com/"
             },
         
         ];
@@ -48,6 +57,7 @@
             projectImage.className = 'project-image';
             projectImage.src = project.imageUrl;
             projectImage.alt = project.title;
+            projectImage.href=project.link;
 
             const projectTitle = document.createElement('h2');
             projectTitle.className = 'project-title';
